@@ -6,11 +6,13 @@
 body {
     background-color: var(--background-color);
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header img {
     height: 50vh;
-    width: 100vw;
+    width: 100%;
 }
 
 h1, h3, p {
@@ -39,4 +41,42 @@ p {
 
 main {
     margin: 20px;
+}
+
+/* desktop style */
+
+@media (min-width: 800px) {
+    body {
+        flex-direction: row;
+    }
+
+    header img {
+        height: 100vh;
+        width: 50vw;
+    }
+
+    main {
+        margin: 20px;
+    }
+
+    h1, h2, h3, p {
+        margin: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
 }
