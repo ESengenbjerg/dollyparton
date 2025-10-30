@@ -5,27 +5,47 @@
 --text-font: Arial, Helvetica, sans-serif; 
 } */
 
+/* General rules */
 body {
   background-color: var(--background-color);
+}
+
+/* Rules applying to text */
+.text {
+  width: 90%;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  padding: 3%;
 }
 
 h1,
 p {
   color: var(--text-white);
-  font-family: var(text-font);
+  font-family: var(--text-font);
 }
 
+h1 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+/* Rules applying to grid w images */
 .imagesGrid {
   display: grid;
-  grid-template-columns: repeat(2, 150px);
-  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: repeat(2, 120px);
+  /* grid-template-columns: repeat(2, minmax(1fr, 150px)); */
+  /* grid-template-columns: minmax(1fr, 150px) minmax(1fr, 150px); */
+  grid-template-rows: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
 }
 
 .images {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 img {
