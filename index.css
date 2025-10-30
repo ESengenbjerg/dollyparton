@@ -1,0 +1,35 @@
+/* :root {
+--background-color: #1e1f20;
+--text-white: #ffffff;
+--text-orange: #E9A989;
+--text-font: Arial, Helvetica, sans-serif; 
+} */
+
+body {
+  background-color: var(--background-color);
+}
+
+h1,
+p {
+  color: var(--text-white);
+  font-family: var(text-font);
+}
+
+.imagesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.images {
+  width: 150px;
+  height: 150px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
