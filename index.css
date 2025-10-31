@@ -21,11 +21,18 @@ button {
   color: var(--text-white);
 }
 
-.buttonContainer {
-  display: flex;
-  justify-content: end;
-  padding-top: 3%;
-  padding-right: 3%;
+.menu-button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+}
+
+.menu-icon {
+  width: 40px;
+  height: auto;
 }
 
 /* Rules applying to text */
