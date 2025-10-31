@@ -1,10 +1,3 @@
-/* :root {
---background-color: #1e1f20;
---text-white: #ffffff;
---text-orange: #E9A989;
---text-font: Arial, Helvetica, sans-serif; 
-} */
-
 /* General rules */
 * {
   box-sizing: border-box;
@@ -15,12 +8,6 @@ body {
 }
 
 /* Rules for menu button */
-
-button {
-  background-color: var(--background-color);
-  color: var(--text-white);
-}
-
 .menu-button {
   background: none;
   border: none;
@@ -63,7 +50,6 @@ p {
 }
 
 /* Rules applying to grid w images */
-
 .flexImage {
   display: flex;
   justify-content: center;
@@ -88,9 +74,9 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* -webkit-filter: brightness(100%); */
 }
 
+/* Text on images */
 .item1 {
   position: relative;
 }
@@ -109,14 +95,15 @@ span {
 
 .item1:hover span {
   display: block;
-  /* -webkit-filter: brightness(50%); */
 }
 
 .portfolioImg:hover {
   filter: brightness(30%);
 }
 
+/* Media Query for Desktop */
 @media (min-width: 1020px) {
+  /* Layouts */
   .imagesGrid {
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: repeat(2, minmax(300px, 1fr));
@@ -136,6 +123,7 @@ span {
     padding-right: 10%;
   }
 
+  /* Font sizes */
   h1 {
     font-size: 4rem;
   }
