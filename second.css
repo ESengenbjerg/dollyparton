@@ -37,27 +37,70 @@ h2 {
 
 p {
     font-size: 1rem ;
+    line-height: 29px;
 }
 
 main {
     margin: 20px;
 }
 
-.menu-button {
+header {
+    display: flex;
+    justify-content: end;
+}
+
+.menu-button, .kryss-button {
   background: none;
   border: none;
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 10px;
+  z-index: 3;
 }
 
-.menu-icon {
+.menu-icon, .kryss-icon {
   width: 40px;
   height: auto;
 }
 
+.menu-board {
+    visibility: hidden;
+    opacity: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-color: var(--background-color);
+    padding: 10%;
+    border: 1px solid var(--text-orange);
+    transition: opacity 0.2s 1s, visibility 0s 2s;
+}
 
+.menu-board h2 {
+    font-size: 2rem;
+    color: var(--text-white);
+}
+
+.menu-board h2:last-of-type {
+    margin-bottom: 50px;
+}
+
+.menu-board h2:first-of-type {
+    margin-bottom: 0;
+}
+
+.menu-button:hover + .menu-board {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+    transition: opacity 0.5s 0s, visibility 0s 0s;
+
+}
+
+a {
+    text-decoration: none;
+    margin-bottom: 0;
+}
 /* desktop style */
 
 @media (min-width: 800px) {
@@ -92,6 +135,13 @@ main {
 
     p {
         font-size: 1.25rem;
+    }
+
+    .menu-board {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px;
     }
 
 }
