@@ -78,7 +78,7 @@ p {
   gap: 20px;
 }
 
-.images {
+.image {
   width: 100%;
   height: 100%;
   aspect-ratio: 1;
@@ -88,6 +88,32 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* -webkit-filter: brightness(100%); */
+}
+
+.item1 {
+  position: relative;
+}
+
+span {
+  display: none;
+  color: var(--text-white);
+  font-family: var(--text-font);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.item1:hover span {
+  display: block;
+  /* -webkit-filter: brightness(50%); */
+}
+
+.portfolioImg:hover {
+  filter: brightness(30%);
 }
 
 @media (min-width: 1020px) {
